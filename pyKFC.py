@@ -205,7 +205,6 @@ def Fibonacci(n):
         return Fibonacci(n-1) + Fibonacci(n-2)
  
  
-# Driver Program
 def edit(dirc, wrt):
     file = open(dirc, "w")
     file.write(wrt)
