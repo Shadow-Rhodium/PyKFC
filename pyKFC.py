@@ -239,6 +239,73 @@ def lcd(x,y):
     return a
 
     
+def encrypt(text, shift):
+    encrypted_text = ""
+    for char in text:
+        if char.isalpha():
+            shifted = ord(char) + shift
+
+            if char.islower():
+                if shifted > ord('z'):
+                    shifted -= 26
+                elif shifted < ord('a'):
+                    shifted += 26
+            elif char.isupper():
+                if shifted > ord('Z'):
+                    shifted -= 26
+                elif shifted < ord('A'):
+                    shifted += 26
+
+            encrypted_text += chr(shifted)
+        else:
+            encrypted_text += char
+
+    return encrypted_text
 
 
+def decrypt(encrypted_text, shift):
+    decrypted_text = ""
+    for char in encrypted_text:
+        if char.isalpha():
+            shifted = ord(char) - shift
+
+            if char.islower():
+                if shifted > ord('z'):
+                    shifted -= 26
+                elif shifted < ord('a'):
+                    shifted += 26
+            elif char.isupper():
+                if shifted > ord('Z'):
+                    shifted -= 26
+                elif shifted < ord('A'):
+                    shifted += 26
+
+            decrypted_text += chr(shifted)
+        else:
+            decrypted_text += char
+
+    return decrypted_text
+
+
+def CO(elements, target): #COUNT OCCURENCES
+    count = 0
+    for element in elements:
+        if element == target:
+            count += 1
+    return count
+
+
+def GeN(start, end): #generate even numbers
+    even_numbers = []
+    for num in range(start, end + 1):
+        if num % 2 == 0:
+            even_numbers.append(num)
+    return even_numbers
+
+def GoN(start, end): #generate odd numbers
+    odd_numbers = []
+    for num in range(start, end + 1):
+        if num % 2 == 0:
+            odd_numbers.append(num)
+    return odd_numbers
 
