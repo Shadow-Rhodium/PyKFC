@@ -5,10 +5,10 @@ from statistics import *
 def PIZZA():
     w.open("https://www.youtube.com/watch?v=I85R9Uyxt18")
 
-def L(num):
+def L(num): #lines
     print("-"*num)
     
-def rect(l,h,x):
+def rect(l,h,x): #rectangle length, height, material
     for i in range(h):
         print(str(x)*l)
     
@@ -42,14 +42,14 @@ def Range(lst):
     m = n2 - n1
     return m
 
-def quad(a,b,c):
+def quad(a,b,c): #quadratic formula
     
     x1 = str((-(b) + m.sqrt((b**2)-4*a*c))/(2*a))
     x2 = str((-(b) - m.sqrt((b**2)-4*a*c))/(2*a))
     return x1, x2
 
 
-def Wcount(st):
+def Wcount(st): #word count in string
     g = st.split(" ")
     lst = []
     for i in g:
@@ -66,7 +66,7 @@ def Wcount(st):
         print(p)
         
 
-def mth(f,l,d,nm):
+def mth(f,l,d,nm): #something
     ls = []
     
     for num in range(f,l+1):
@@ -75,7 +75,7 @@ def mth(f,l,d,nm):
             
     return ls
 
-def Pascal(n):
+def Pascal(n): #pascal Triangle n lines
   for i in range(n):
     # adjust space
     print(' '*(n-i), end='')
@@ -85,7 +85,7 @@ def Pascal(n):
 
 
 
-def triangle(n,x,s,t):
+def triangle(n,x,s,t): #center triangle, n lines, x material, s angle in quotation spaces, t boolean
      
     # number of spaces
     k = n - 1
@@ -113,7 +113,7 @@ def triangle(n,x,s,t):
         # ending line after each row
         print("\r")
  
-def revtri(n,x,s,t):
+def revtri(n,x,s,t): # upside down center triangle, same same
      
     # number of spaces
     for i in range(n, 1, -1):
@@ -135,23 +135,23 @@ def revtri(n,x,s,t):
                 print(f"{x} " , end="")
         print()
         
-def rightri(x,n,t):
+def rightri(x,n,t): #right triangle, same same
     for i in range(1,n+1):
         if t is True:
             x=i
         print(str(x)*i)
         
-def leftri(x,n,t):
+def leftri(x,n,t): #opposite right triangle, same same
     for i in range(n, 0,-1):
         if t is True:
             x=i
         print(str(x)*i)
         
-def triside(x,n,t):
+def triside(x,n,t): #half crystal, same same
     rightri(x,n,t)
     leftri(x,n-1,t)
         
-def numtri(r):
+def numtri(r): #number triangle
     k = 0
     count=0
     count1=0
@@ -173,7 +173,7 @@ def numtri(r):
         count1 = count = k = 0
         print()
 
-def Floyd(r):
+def Floyd(r): #Floyd's triangle (search it up)
 
     number = 1
 
@@ -184,7 +184,7 @@ def Floyd(r):
         print()
 
 
-def Fibonacci(n):
+def Fibonacci(n): #Fibonacci Sequence
  
     # Check if input is 0 then it will
     # print incorrect input
@@ -205,41 +205,41 @@ def Fibonacci(n):
         return Fibonacci(n-1) + Fibonacci(n-2)
  
  
-def edit(dirc, wrt):
+def edit(dirc, wrt): #edits file with given string and directroy
     file = open(dirc, "w")
     file.write(wrt)
     file.close()
 
 
-def substring(strg, start, end):
+def substring(strg, start, end): #Substring from AP CSP
     start = int(start)
     end = int(end)
     string = strg[start-1:(start+end)-1]
     return  string
 
-def concat(str1, str2):
+def concat(str1, str2): #Concat from AP CSP
     str1 = str(str1)
     str2 = str(str2)
     string = (str1+str2)
     return string
 
-def reverse(strg):
+def reverse(strg): #reverse from AP CSP
     string = strg[::-1]
     return string
-
-def prefix(strg, length):
+ 
+def prefix(strg, length): #Prefix from AP CSP
     string = strg[:length]
     return string
 
 
-def lcd(x,y):
+def lcd(x,y): #Least common denominator
     z = x*y
     g=m.gcd(x,y)
     a = g/z
     return a
 
     
-def encrypt(text, shift):
+def encrypt(text, shift): #Encrypts string
     encrypted_text = ""
     for char in text:
         if char.isalpha():
@@ -263,7 +263,7 @@ def encrypt(text, shift):
     return encrypted_text
 
 
-def decrypt(encrypted_text, shift):
+def decrypt(encrypted_text, shift): #Decrypts string
     decrypted_text = ""
     for char in encrypted_text:
         if char.isalpha():
