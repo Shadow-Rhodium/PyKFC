@@ -84,7 +84,6 @@ def Pascal(n): #pascal Triangle n lines
     print(' '.join(map(str, str(11**i))))
 
 
-
 def triangle(n,x,s,t): #center triangle, n lines, x material, s angle in quotation spaces, t boolean
      
     # number of spaces
